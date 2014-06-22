@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<!-- http://responsivewebinc.com/premium/ericka/ericka-g/ -->
+	<!-- Title -->
+	<title>KineVanmechelen</title>
+	<!-- Description, Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Wij heten U van harte welkom op onze praktijk.
+	Op deze website krijgt U informatie over de werking en afspraken met de kinesist.
+	Onze openingsuren zijn van maandag tot vrijdag tussen 8 uur 's morgens en 8 uur 's avonds ">
+	<meta name="keywords" content="">
+	<meta name="author" content="Rik Vanmechelen">
+
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet" type="text/css">
+
+	<!-- Stylesheets -->
+	</head><body>
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
+
+	<!-- HTML5 Support for IE -->
+	<!--[if lt IE 9]>
+	<script src="js/html5shim.js"></script>
+	<![endif]-->
+
+	<!-- Favicon -->
+
+
+
+
+<!-- Header starts -->
+
+<header>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2 col-md-2">
+				<!-- Logo and site link -->
+				<div class="logo">
+					<%= image_tag "logo2.png", class: "header_logo" %>
+				</div>
+			</div>
+			<div class="col-sm-7 col-md-7">
+				<!-- Logo and site link -->
+				<div class="logo">
+					<h1><%= link_to "Kinepraktijk Vanmechelen", root_url %><span class="color">.</span></h1>
+				</div>
+			</div>
+			<div class="col-sm-3 col-md-3">
+				<div class="list">
+					<!-- Add your phone number here -->
+					<div class="phone">
+						<i class="icon-phone"></i> Telefoon: 011/68 05 47
+					</div>
+					<hr>
+					<div class="phone">
+						<i class="icon-phone"></i> GSM: 0496/51 05 47
+					</div>
+					<hr>
+					<!-- Add your email id here -->
+					<div class="email">
+						<i class="icon-envelope-alt"></i> michel@kine-vanmechelen.be
+					</div>
+					<hr>
+					<!-- Add your address here -->
+					<div class="address">
+						<i class="icon-home"></i> Tiensesteenweg 219, 3800 St-Truiden
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<!-- Header ends -->
+
+<!-- Navigation Starts -->
+
+<!-- Note down the syntax before editing. It is the default twitter bootstrap navigation -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="navbar-inner">
+		<div class="container">
+		<!-- <a class="btn btn-navbar btn-default" data-toggle="collapse" data-target=".nav-collapse">
+			Menu
+		</a> -->
+		<!-- Brand and toggle get grouped for better mobile display -->
+
+    	<!-- <div class="navbar-header">
+    	  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+    	    HELLO
+    	  </button>
+    	  <a class="btn btn-navbar" data-toggle="collapse" data-target="#main-nav">
+				Menu
+				</a>
+    	</div> -->
+
+    	<div class="navbar-header">
+      	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+      	  <span class="sr-only">Toggle navigation</span>
+      	  <span class="icon-bar"></span>
+      	  <span class="icon-bar"></span>
+      	  <span class="icon-bar"></span>
+      	</button>
+    	</div>
+
+    	<div class="collapse navbar-collapse" id="main-nav">
+				<!-- Navigation links starts here -->
+    	  <ul class="nav navbar-nav">
+					<!-- Main menu -->
+					<% Page.all.each do |page| %>
+						<li><%= link_to page.title, page %></li>
+					<% end %>
+					<!-- Navigation with sub menu. Please note down the syntax before you need. Each and every link is important. 	-->
+					<!--
+					<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages #1 <b class="caret"></b></a>
+					-->
+					<!-- Submenus
+					<ul class="dropdown-menu">
+					<li><a href="support.html">Support</a></li>
+					<li><a href="products.html">Products</a></li>
+					<li><a href="register.html">Register</a></li>
+					<li><a href="login.html">Login</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="service.html">Service #1</a></li>
+					<li><a href="service1.html">Service #2</a></li>
+					<li><a href="pricing.html">Pricing Table</a></li>
+					<li><a href="careers.html">Careers</a></li>
+					<li><a href="faq.html">FAQ</a></li>
+					<li><a href="team.html">Team</a></li>
+					</ul>
+					</li>
+					-->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<!-- Navigation Ends -->
+
+<!-- Content strats -->
+
+<div class="content">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-md-12">
+				<div class="main-content">
+					<%= yield %>
+					<div class="bor"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Content ends -->
+
+<!-- Footer -->
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-md-12"><hr><span class="copy">
+				<!-- Copyright information. You can remove my site link. -->
+				Copyright © <%= link_to "kine-vanmechelen.be", root_url %> 2013</span>
+				<span class="right"><%= yield :edit_link %> | <%= link_to "alle", pages_path %></span>
+			</div>
+		</div>
+	</div>
+</footer>
+
+</body></html>
