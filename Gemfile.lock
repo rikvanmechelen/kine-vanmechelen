@@ -52,6 +52,9 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     colorize (0.7.3)
+    dotenv (0.11.1)
+      dotenv-deployment (~> 0.0.2)
+    dotenv-deployment (0.0.2)
     erubis (2.7.0)
     execjs (2.2.0)
     font-awesome-rails (4.1.0.0)
@@ -149,6 +152,8 @@ DEPENDENCIES
   capistrano-rails (~> 1.1)
   capistrano-rvm
   coffee-rails (~> 4.0.0)
+  dotenv
+  dotenv-deployment
   font-awesome-rails
   jbuilder (~> 2.0)
   jquery-rails

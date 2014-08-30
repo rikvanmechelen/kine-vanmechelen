@@ -46,6 +46,9 @@ group :development do
   gem 'capistrano-bundler', '~> 1.1', require: false
 end
 
+gem 'dotenv'
+gem 'dotenv-deployment', require: 'dotenv/deployment'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
