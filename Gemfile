@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'dotenv'
+gem 'dotenv-deployment', require: 'dotenv/deployment'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
@@ -45,9 +47,6 @@ group :development do
   gem 'capistrano-rails',   '~> 1.1', require: false
   gem 'capistrano-bundler', '~> 1.1', require: false
 end
-
-gem 'dotenv'
-gem 'dotenv-deployment', require: 'dotenv/deployment'
 
 gem 'capistrano3-puma', github: "seuros/capistrano-puma"
 
