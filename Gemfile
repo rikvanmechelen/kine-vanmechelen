@@ -49,6 +49,8 @@ end
 gem 'dotenv'
 gem 'dotenv-deployment', require: 'dotenv/deployment'
 
+gem 'capistrano3-puma', github: "seuros/capistrano-puma"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
