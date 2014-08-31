@@ -4,11 +4,6 @@ Rails.application.routes.draw do
 
   root :to => 'pages#show', :id => 'home'
 
-  match 'rondleiding' => 'pages#rondleiding', via: :get
-  match 'kinderen' => 'pages#kinderen', via: :get
-  match 'volwasenen' => 'pages#volwasenen', via: :get
-  match 'mindfullness' => 'pages#mindfullness', via: :get
-  match 'contact' => 'pages#contact', via: :get
 
   resources :pages, path: "", except: [:index, :new, :create]
 
