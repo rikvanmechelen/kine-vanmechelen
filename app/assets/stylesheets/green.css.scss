@@ -160,7 +160,7 @@ color:$main_color;
 }
 
 .content ul li{
-background-image:url('list-g.png');
+background-image:asset-url('list-g.png');
 }
 
 
@@ -234,5 +234,5 @@ border-top:3px solid $main_color;
 }
 
 footer ul li{
-background-image:url('list-g.png');
+background-image:asset-url('list-g.png');
 }
