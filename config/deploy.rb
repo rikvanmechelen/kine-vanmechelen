@@ -27,7 +27,7 @@ set :deploy_to, '/home/kinevanmechelen/rails-website'
 # set :pty, true
 
 # Default value for :linked_files is []
-set :linked_files, %w{.env}
+set :linked_files, %w{.env config/secrets.yml}
 
 # Default value for linked_dirs is []
 # set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}

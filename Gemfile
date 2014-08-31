@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'dotenv'
-gem 'dotenv-deployment', require: 'dotenv/deployment'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
+gem 'dotenv'
+gem 'dotenv-rails', :groups => [:development, :test]
+gem 'dotenv-deployment', require: 'dotenv/deployment'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
