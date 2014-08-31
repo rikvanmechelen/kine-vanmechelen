@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  http_basic_authenticate_with name: "michel", password: "michel", except: :show
+  http_basic_authenticate_with name: ENV["HTTP_LOGIN"], password: ENV["HTTP_PW"], except: :show
 
   before_action :set_page, only: [:show, :edit, :update, :destroy]
   def home
