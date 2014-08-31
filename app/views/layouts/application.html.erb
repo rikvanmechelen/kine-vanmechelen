@@ -30,7 +30,7 @@
 	<!-- Favicon -->
 
 
-
+<div class="wrapper">
 
 <!-- Header starts -->
 
@@ -53,21 +53,21 @@
 				<div class="list">
 					<!-- Add your phone number here -->
 					<div class="phone">
-						<i class="icon-phone"></i> Telefoon: 011/68 05 47
+						<i class="icon-phone"></i> Telefoon: <a href="tel:+3211680547">011/68 05 47</a>
 					</div>
 					<hr>
 					<div class="phone">
-						<i class="icon-phone"></i> GSM: 0496/51 05 47
+						<i class="icon-phone"></i> GSM: <a href="tel:+32496510547">0496/51 05 47</a>
 					</div>
 					<hr>
 					<!-- Add your email id here -->
 					<div class="email">
-						<i class="icon-envelope-alt"></i> michel@kine-vanmechelen.be
+						<i class="icon-envelope-alt"></i> <a href="mailto:michel%40kine-vanmechelen.be?subject=via kine-vanmechelen.be" target="_blank">michel@kine-vanmechelen.be</a>
 					</div>
 					<hr>
 					<!-- Add your address here -->
 					<div class="address">
-						<i class="icon-home"></i> Tiensesteenweg 219, 3800 St-Truiden
+						<i class="icon-home"></i> <a href="https://www.google.com/maps/place/Kinepraktijk+Vanmechelen/@50.814251,5.165581,17z/data=!4m2!3m1!1s0x47c110d355db8f0b:0x20c71bc64d3f8427" target="_blank">Tiensesteenweg 219, 3800 St-Truiden</a>
 					</div>
 				</div>
 			</div>
@@ -160,13 +160,15 @@
 
 <!-- Content ends -->
 
+</div>
+
 <!-- Footer -->
 <footer>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12 col-md-12"><hr><span class="copy">
 				<!-- Copyright information. You can remove my site link. -->
-				Copyright © <%= link_to "kine-vanmechelen.be", root_url %> 2013</span>
+				Copyright © <%= link_to "kine-vanmechelen.be", root_url %> <%= Date.current.year %></span>
 				<span class="right"><%= yield :edit_link %> | <%= link_to "alle", pages_path %></span>
 			</div>
 		</div>
