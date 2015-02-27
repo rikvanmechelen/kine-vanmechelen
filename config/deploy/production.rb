@@ -17,7 +17,7 @@
 
 #server 'example.com', user: 'deploy', roles: %w{web app}, my_property: :my_value
 
-server "direct.p34nut.be", user: 'kinevanmechelen', roles: %w{app web db}
+server "80.241.214.122", user: 'kinevanmechelen', roles: %w{app web db}
 
 
 
